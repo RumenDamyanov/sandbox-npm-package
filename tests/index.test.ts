@@ -82,7 +82,7 @@ describe('Package Exports', () => {
       // Try to modify it (should silently fail in strict mode)
       try {
         (packageInfo as any).name = 'different-name';
-      } catch (error) {
+      } catch {
         // Object.freeze should prevent modification
       }
 

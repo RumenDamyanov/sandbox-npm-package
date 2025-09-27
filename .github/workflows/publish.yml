@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     
     permissions:
-      contents: read
+      contents: write
       id-token: write
     
     steps:
@@ -42,20 +42,17 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - name: Create GitHub Release Assets
+      - name: Create and Upload Release Assets
         run: |
           npm pack
-          mv *.tgz package.tgz
+          PACKAGE_FILE=$(ls *.tgz)
+          ASSET_NAME="${{ github.event.repository.name }}-${{ github.event.release.tag_name }}.tgz"
+          mv "$PACKAGE_FILE" "$ASSET_NAME"
 
-      - name: Upload Release Asset
-        uses: actions/upload-release-asset@v1
+          echo "Uploading release asset: $ASSET_NAME"
+          gh release upload ${{ github.event.release.tag_name }} "$ASSET_NAME" --clobber
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ github.event.release.upload_url }}
-          asset_path: ./package.tgz
-          asset_name: ${{ github.event.repository.name }}-${{ github.event.release.tag_name }}.tgz
-          asset_content_type: application/gzip
 
       - name: Update Package Version Badge
         run: |

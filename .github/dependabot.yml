@@ -1,0 +1,68 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Europe/Sofia"
+    assignees:
+      - "RumenDamyanov"
+    reviewers:
+      - "RumenDamyanov"
+    commit-message:
+      prefix: "chore"
+      prefix-development: "chore"
+      include: "scope"
+    labels:
+      - "dependencies"
+      - "automated"
+    open-pull-requests-limit: 5
+    pull-request-branch-name:
+      separator: "/"
+    ignore:
+      # Ignore major version updates for stable dependencies
+      - dependency-name: "typescript"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "eslint"
+        update-types: ["version-update:semver-major"]
+    groups:
+      typescript-ecosystem:
+        patterns:
+          - "typescript"
+          - "@typescript-eslint/*"
+          - "ts-jest"
+      testing-framework:
+        patterns:
+          - "jest"
+          - "@types/jest"
+          - "ts-jest"
+      linting-tools:
+        patterns:
+          - "eslint"
+          - "eslint-*"
+          - "prettier"
+      build-tools:
+        patterns:
+          - "@types/node"
+          - "typescript"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "10:00"
+      timezone: "Europe/Sofia"
+    assignees:
+      - "RumenDamyanov"
+    reviewers:
+      - "RumenDamyanov"
+    commit-message:
+      prefix: "ci"
+      include: "scope"
+    labels:
+      - "github-actions"
+      - "automated"
+    open-pull-requests-limit: 3

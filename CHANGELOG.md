@@ -8,6 +8,14 @@ and this project adheres to
 
 ## [Unreleased]
 
+## [1.0.1] - 2025-09-27
+
+### Fixed
+- Updated GitHub Actions workflows for better reliability
+- Fixed CI security audit command syntax
+- Modernized release asset upload using GitHub CLI
+- Updated permissions for release workflow
+
 ### Added
 
 - Initial project structure and configuration

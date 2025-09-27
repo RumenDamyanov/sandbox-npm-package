@@ -6,7 +6,27 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [1.0.2] - 2025-09-27
+
+### Fixed
+
+- Fixed npm publish workflow version conflict error
+- Resolved CI security audit command syntax issues
+- Updated GitHub Actions checkout to v5 for compatibility
+
+### Changed
+
+- Updated TypeScript ecosystem dependencies via Dependabot
+- Updated @types/node in build-tools group
+- Updated eslint-config-prettier in linting-tools group
+- Updated testing framework dependencies
+- Updated codecov-action to v5
+- Updated actions/setup-node to v5
+
+### Maintenance
+
+- Automated dependency updates through Dependabot pull requests
+- Improved CI/CD pipeline reliability and modern action versions
 
 ## [1.0.1] - 2025-09-27
 

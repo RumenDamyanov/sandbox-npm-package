@@ -1,0 +1,46 @@
+codecov:
+  require_ci_to_pass: yes
+  notify:
+    wait_for_ci: yes
+
+coverage:
+  precision: 2
+  round: down
+  range: "70...100"
+  
+  status:
+    project:
+      default:
+        target: 95%
+        threshold: 1%
+        if_not_found: success
+        if_ci_failed: error
+    patch:
+      default:
+        target: 95%
+        threshold: 1%
+        if_not_found: success
+        if_ci_failed: error
+
+comment:
+  layout: "reach,diff,flags,tree,footer"
+  behavior: default
+  require_changes: false
+  require_base: no
+  require_head: yes
+
+github_checks:
+  annotations: true
+
+ignore:
+  - "tests/"
+  - "**/*.test.ts"
+  - "**/*.spec.ts"
+  - "**/*.d.ts"
+  - "dist/"
+  - "coverage/"
+  - "node_modules/"
+  - ".github/"
+  - "jest.config.js"
+  - "*.config.js"
+  - "*.config.ts"

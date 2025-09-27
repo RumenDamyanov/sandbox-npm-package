@@ -1,0 +1,14 @@
+# Ignore files for Prettier formatting
+node_modules/
+dist/
+coverage/
+*.log
+.DS_Store
+.env*
+.vscode/
+.idea/
+*.min.js
+*.min.css
+package-lock.json
+yarn.lock
+pnpm-lock.yaml

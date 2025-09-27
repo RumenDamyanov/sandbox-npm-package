@@ -1,0 +1,49 @@
+# NPM ignore file - defines what should NOT be published to npm
+
+# Source files (only publish built files)
+src/
+tests/
+.ai/
+
+# Development configuration
+.eslintrc.json
+.prettierrc
+.prettierignore
+jest.config.js
+tsconfig*.json
+
+# CI/CD configuration
+.github/
+
+# Development artifacts
+coverage/
+*.log
+*.tsbuildinfo
+.eslintcache
+.nyc_output
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*.swo
+*~
+
+# Git files
+.git/
+.gitignore
+
+# Dependency files (npm will install these)
+node_modules/
+
+# Development environment
+.env*
+
+# Build tools output (keep only final dist)
+build/
+
+# Documentation files to keep
+!README.md
+!LICENSE.md
+!CHANGELOG.md

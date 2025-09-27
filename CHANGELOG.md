@@ -1,0 +1,51 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to
+[Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [Unreleased]
+
+### Added
+
+- Initial project structure and configuration
+- TypeScript setup with strict mode
+- Jest testing framework with 95%+ coverage requirement
+- ESLint and Prettier code quality tools
+- GitHub Actions CI/CD pipeline
+- Dependabot configuration for automated dependency updates
+- Comprehensive documentation (README, CONTRIBUTING, CODE_OF_CONDUCT)
+
+### Features
+
+- `greet(name?: string)` - Basic greeting function
+- `greetWithOptions(name?: string, options?: GreetingOptions)` - Advanced
+  greeting with customization
+- `isValidName(name?: string)` - Name validation utility
+- Full TypeScript type definitions
+- Zero runtime dependencies
+
+## [1.0.0] - 2025-01-01
+
+### Added
+
+- Initial release of the sandbox npm package
+- Complete demonstration of TypeScript npm package best practices
+- Educational resource for package development workflows
+
+### Technical Details
+
+- Node.js 18+ support
+- TypeScript 5.x with strict mode
+- Jest testing with comprehensive coverage
+- ESLint + Prettier code quality
+- GitHub Actions automation
+- NPM publishing workflow
+
+---
+
+**Note**: This changelog will be automatically updated as part of the release
+process. Each release will document new features, bug fixes, and breaking
+changes following conventional commit standards.

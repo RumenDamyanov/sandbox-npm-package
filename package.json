@@ -1,6 +1,6 @@
 {
   "name": "@rumenx/sandbox-npm-package",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A demo npm package showcasing TypeScript best practices for development, testing, and publishing",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

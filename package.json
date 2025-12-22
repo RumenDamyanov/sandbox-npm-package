@@ -76,7 +76,7 @@
     "typescript": "^5.5.4"
   },
   "dependencies": {
-    "@rumenx/chatbot": "^1.0.0",
+    "@rumenx/chatbot": "^2.0.0",
     "@rumenx/feed": "^1.0.0",
     "@rumenx/seo": "^1.0.1",
     "@rumenx/sitemap": "^1.0.0"
